@@ -1,0 +1,5 @@
+fastapi
+minio
+uvicorn 
+python-dotenv
+python-multipart
