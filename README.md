@@ -1,3 +1,10 @@
+**ARCHITECTURE DIAGRAM**
+
+
+
+
+![MinIO + FastAPI Architecture](minio_architecture.jpg)
+
 **MINIO SETUP IN LOCAL:** <br>
 curl -O https://dl.min.io/server/minio/release/darwin-arm64/minio <br>
 chmod +x ./minio <br>
