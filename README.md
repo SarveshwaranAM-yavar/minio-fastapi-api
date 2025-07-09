@@ -53,7 +53,7 @@ python -m uvicorn app.main:app –reload
 
 **API ENDPOINTS:**
 
-http method 	Endpoint 	Description <br>
+http -> method	Endpoint ->	Description <br>
 POST	-> /upload ->	Upload file to minio bucket. <br>
 GET ->	/list ->	List all the files available in the bucket. <br>
 GET ->	/get-url?filename=sample.txt -> Get the url for the file to access it in the web. <br>
