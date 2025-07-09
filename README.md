@@ -53,11 +53,11 @@ GET ->	/get-url?filename=sample.txt -> Get the url for the file to access it in 
 PUT -> /update/{file_name} -> Update the already existing file. <br>
 DELETE	-> /delete/{filename}	-> Delete a specific file <br>
 
-**FILE STORAGE DESIGN:**
-i.Objects are stored in the minio by their filename as a key.
+**FILE STORAGE DESIGN:**<br>
+i.Objects are stored in the minio by their filename as a key.<br>
 ii.Stored in the defined bucket. 
 
-**TESTING:**
-i.Use swagger-UI localhost:8000/docs 
-ii.POSTMAN for uploading the file and test the working. 
+**TESTING:** <br>
+i.Use swagger-UI localhost:8000/docs <br>
+ii.POSTMAN for uploading the file and test the working. <br>
 Note: Use the minio GUI (localhost:9001) for further checking the file is uploaded properly. 
