@@ -1,4 +1,4 @@
-**ARCHITECTURE DIAGRAM**
+<img width="468" height="337" alt="image" src="https://github.com/user-attachments/assets/71ec67ed-ca8a-4fda-8ba9-5b94c8158302" />**ARCHITECTURE DIAGRAM**
 
 
 
@@ -60,9 +60,9 @@ python -m uvicorn app.main:app --reload
 
 7.	Run frontend: 
 
-cd minio/frontend
+cd minio/frontend <br>
 npm start
-<img width="468" height="253" alt="image" src="https://github.com/user-attachments/assets/9ddde365-a9f2-4cac-9786-a4a9843f58a1" />
+
 
 
 **API ENDPOINTS:**
@@ -82,3 +82,32 @@ ii.Stored in the defined bucket.
 i.Use swagger-UI localhost:8000/docs <br>
 ii.POSTMAN for uploading the file and test the working. <br>
 Note: Use the minio GUI (localhost:9001) for further checking the file is uploaded properly. 
+
+
+**Manual CLI for docker minIO**
+Manual CLI for docker minIO : <br>
+docker run -d \ <br>
+  --name minio-server \ <br>
+  -p 9000:9000 \ <br>
+  -p 9001:9001 \ <br>
+  -e "MINIO_ROOT_USER=minioadmin" \ <br>
+  -e "MINIO_ROOT_PASSWORD=minioadmin123" \ <br>
+  quay.io/minio/minio:RELEASE.2023-12-02T10-29-32Z \ <br>
+  server /data --console-address ":9001" <br>
+Note: this will create and run the minio-server in the docker and exposing it to our local via port localhost:9001 for the GUI and localhost:9000 for the api instances. This will create a storage volume inside the docker for storing the files which we are intended to upload. <br>
+
+
+We can use the docker-compose.yml which is efficient instead of manually creating the docker container using the CLI. <br>
+inorder to create a container: <br>
+docker compose up -d <br>
+Note: this will create a docker compose and start to run the server. You verify using the localhost:9001 with the username and password. <br>
+docker ps : will list the containers in run. <br>
+
+Whenever you finished your operation. You can either down(removing the container) or stop the container. <br>
+docker compose stop – will stop the containers from working but still resist the information and all the containers details within. So you can start it again whenever needed it out. <br>
+In order to start the container again use, docker compose start <br>
+
+docker compose down – will entirely remove the containers. <br>
+Note: still the data will be persist on the local which will not be deleted in this scenario. <br>
+
+
