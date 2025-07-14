@@ -47,9 +47,23 @@ pip install -r requirements.txt
 
 4.	Make sure minio server is running in the background (refer minio setup in local)
 
-5.	Start FastAPI:
+5.	Frontend Setup (React)
+Create app
+cd minio
+npx create-react-app frontend
+cd frontend
+npm install axios
 
-python -m uvicorn app.main:app –reload
+6.	Start FastAPI:
+
+python -m uvicorn app.main:app --reload
+
+7.	Run frontend: 
+
+cd minio/frontend
+npm start
+<img width="468" height="253" alt="image" src="https://github.com/user-attachments/assets/9ddde365-a9f2-4cac-9786-a4a9843f58a1" />
+
 
 **API ENDPOINTS:**
 
